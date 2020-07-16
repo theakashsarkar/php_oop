@@ -1,5 +1,5 @@
 <?php
-class Bike implements IteratorAggregate{
+class Bike{
     public $motorBike;
     public function __construct($motorBike){
         $this->motorBike = $motorBike;
@@ -8,10 +8,10 @@ class Bike implements IteratorAggregate{
     public function setMotorBike($motorBike){
         $this->motorBike = $motorBike;
     }
-    public function __toString(){
-        // return "My Bike {$this->motoBike}";
-        return $this->motorBike;
-    }
+    // public function __toString(){
+    //     // return "My Bike {$this->motoBike}";
+    //     return $this->motorBike;
+    // }
 }
 $b1 = new Bike('FZ');
-echo $b1;
+echo (string) $b1;

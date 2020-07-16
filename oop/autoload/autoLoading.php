@@ -5,14 +5,20 @@
 //    }
 //    echo $name;
 // }
+// function autoLoad($name){
+//     if(strpos($name,'planet')!== false){
+//         $fileName = str_replace("planet","",$name);
+//         include strtolower("planet/{$fileName}.php");
+//     }else{
+//         include strtolower("{$name}.php");
+//     }
+// }
+// spl_autoload_register('autoLoad');
+// // (new spachShip)->lanch();
+// (new planet)->planet();
+// (new bike)->getType();
 function autoLoad($name){
-    if(strpos($name,'planet')!== false){
-        $fileName = str_replace("planet","",$name);
-        include "planet/${name}.php";
-    }else{
-        
-    }
+    include strtolower("{$name}.php");
 }
 spl_autoload_register('autoLoad');
 (new spachShip)->lanch();
-(new bike)->getType();

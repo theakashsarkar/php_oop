@@ -1,7 +1,10 @@
 <?php
-// namespace Astronomy;
+namespace Astronomy;
 include "Planet.php";
- $planet = new \Astronomy\Planet();
+include "Earth.php";
+ $planet = new \Astronomy\Planets\time\ Planet();
+ $planet = new \Astronomy\Planets\ Earth();
+$planet->getName();
 $planet->getName();
 
-// new DateTime();
+// new \DateTime();
